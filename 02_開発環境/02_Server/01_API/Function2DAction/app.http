@@ -1,0 +1,43 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+GET http://localhost:7078/api/member/get
+
+
+
+###
+GET http://localhost:7078/api/ranking/get?stage=1
+
+
+###
+POST http://localhost:7078/api/ranking/add
+ {
+    "UserId": 103,
+    "StageId":1,
+    "Time": 123.4
+  }
+
+
+
+###
+GET https://functionappge202402.azurewebsites.net/api/ranking/get?stage=1
+x-functions-key:e-L4VqC3rter_KNKNWvL-35mdvCzH_b0ltPFxSLgfMLYAzFu4Bzu4A==
+
+
+
+###
+GET https://functionappge202402.azurewebsites.net/api/member/get
+x-functions-key:e-L4VqC3rter_KNKNWvL-35mdvCzH_b0ltPFxSLgfMLYAzFu4Bzu4A==
+
+
+
+###
+POST https://functionappge202402.azurewebsites.net/api/ranking/add
+Content-Type: aplicasion/json
+x-functions-key:e-L4VqC3rter_KNKNWvL-35mdvCzH_b0ltPFxSLgfMLYAzFu4Bzu4A==
+ {
+    "UserId": 103,
+    "StageId":1,
+    "Time": 123.4
+  }
+
+
+

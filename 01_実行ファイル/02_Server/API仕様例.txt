@@ -1,0 +1,52 @@
+■■■■■■■■■■■■■■■■
+■ 2DアクションゲームAPI仕様  ■
+■■■■■■■■■■■■■■■■
+
+1. スコア登録API
+[概要]
+　ゲーム内で記録されたタイム、指定されたユーザID、ステージIDを登録する。
+
+[URL]
+　https://functionappge202402.azurewebsites.net/api/ranking/add
+
+[メソッド]
+　POST
+
+[リクエストパラメータ]
+　StageId [int] ステージID
+　UserId [int] ユーザID
+　Time [float] タイム
+
+[レスポンスサンプル]
+ {
+    "UserId": 10,
+    "StageId":1,
+    "Time": 123.4
+  }
+
+2. ランキング取得API
+[概要]
+　データベース内にあるユーザデータの内タイムが短い5個のデータをステージごとに取り出す
+
+[URL]
+　https://functionappge202402.azurewebsites.net/api/ranking/get
+
+[メソッド]
+　GET
+
+[リクエストパラメータ]
+　UserId [int] ユーザID
+　Time [float] タイム
+
+3.ユーザ数取得API
+[概要]
+　データベース内の登録しているユーザ数を取得する
+
+[URL]
+　https://functionappge202402.azurewebsites.net/api/member/get
+
+[メソッド]
+　GET
+
+[リクエストパラメータ]
+　member [long] ユーザ数
